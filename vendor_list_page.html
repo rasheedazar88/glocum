@@ -1,0 +1,603 @@
+<html>
+<head>
+    <title>vendor list</title>
+    <link href="http://fonts.cdnfonts.com/css/cerebri-sans" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+   
+
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: "Cerebri Sans",sans-serif;
+            font-size: .9375rem;
+            font-weight: 400;
+        }
+        .table-striped thead{
+            background-color: rgb(75, 69, 69);
+            color: #fff;
+        }
+        .table-striped tbody{
+            text-align: center;
+        }
+        .table-striped tbody a{
+            cursor: pointer;
+            color: rgb(113, 100, 230) !important;
+        }
+
+        
+        .modal.show .modal-dialog{
+            max-width: 99.5% !important;
+        }
+
+        .modal-header{
+            padding: 0.5rem 1rem !important;
+            background-color: rgb(75, 69, 69);
+            color: #fff !important;
+        }
+
+        
+        .btn-close{
+            filter: invert(1) !important;
+        }
+
+
+        .modal-body ul {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 48px;
+            overflow: hidden;
+            border-radius: 5px;
+            font-family: inherit;
+            }
+
+        .modal-body li {
+            float: left;
+            margin: 20px 40px 20px 45px;
+            font-family: inherit;
+            border: 1px solid #80808069;
+            border-radius: 10px;
+        }
+
+        .modal-body li a {
+            display: block;
+            color: #0e0e0e;
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-family: inherit;
+        }
+
+        .modal-body li a:hover {
+            background-color: #dad4d42b;
+            color:black;
+        }
+
+
+
+
+        
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 20px;
+    line-height: 20px;
+    border-bottom: 0.5px solid #80808014;
+    padding-bottom: 25px;
+}
+
+
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: #918c8c;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 5px;
+    margin: 10px 0px 10px 2px;
+    color: #fff;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #9f9999;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #d7d6d6;
+    border-radius: 5px;
+    color: black;
+    font-size: 18px;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;  
+}
+
+
+/* for order details content */
+.container{
+        margin-top: 30px;
+    }
+    .first_cont{
+        width: 28% !important;
+    }
+
+    .second_cont{
+        width: 43% !important;
+    }
+
+    .third_cont{
+        width: 27% !important;
+    }
+
+ .col-sm-4 .lab_cont label{
+        display: block !important;
+    }
+    .first_cont, .second_cont, .third_cont{
+        background-color: #fff;
+        overflow: hidden;
+    }
+    .first_coloumn{
+        box-shadow: 0px 0px 10px 1px #80808070;
+        padding: 10px 30px;
+        margin: 20px 10px ;
+    }
+    .col_first_content{
+        margin: 50px 0px;
+    }
+
+
+    textarea{
+        resize: vertical;
+        height: 100px;
+        width: 200px;
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+   
+
+                .dropbtn {
+                    color: #161616;
+                    padding: 5px 45px;
+                    font-size: 13px;
+                    border: none;
+                    cursor: pointer;
+                    margin-left: 40px !important;
+                    border-radius: 5px;
+                      }
+                      .dropdown{
+                        margin-left: 70px ;
+                      }
+                      
+                      .dropbtn:hover, .dropbtn:focus {
+                        background-color: #d2d7da;
+                      }
+                      
+                      .dropdown, .date, .sample_input {
+                        position: relative;
+                        display: inline-block;
+                      }
+                      
+                      .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        background-color: #f5f5f5;
+                        min-width: 160px;
+                        overflow: auto;
+                        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+                        z-index: 1;
+                        border-radius: 5px;
+                        margin-left: 33px;
+                      }
+                      
+                      .dropdown-content a {
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                      }
+                      
+                      .dropdown a:hover {background-color: #fff;}
+                      
+                      .show {display: block;}
+
+                      .date #birthday{
+                        width: 150px;
+                        margin-left: 135px;
+                        height: 28;
+                      }
+
+                      .sample_input{
+                        width: 150px;
+                        height: 28px;
+                      }
+                      .input_one{
+                          margin-left: 103px;
+                      }
+                      .input_two{
+                          margin-left: 104px;
+                      }
+                      .input_three{
+                          margin-left: 131px;
+                      }
+                      .input_four{
+                          margin-left: 97px;
+                      }
+                      .input_five{
+                          margin-left: 51px;
+                      }
+                      .input_six{
+                          margin-left: 15px;
+                      }
+                      .third_cont label{
+                          font-size: 13px;
+                      }
+                     
+/* end */
+
+/* for grid content */
+.upload{
+                        border-radius: 5px;
+                        padding: 10px 35px;
+                        font-size: 25px;
+                        border: 1px solid #05057f;
+                        margin: 20px 30px;
+                        font-weight: 350;
+                        background-color: #fff;
+                        color: #05057f;
+                      }
+                      .upload:hover{
+                        background-color: #e3e3e37a;
+                      }
+
+                    .cus_details input{
+                        border: 1px solid #a6a6a7;
+                    }
+                    .cus_details i{
+                        margin-right: 10px;
+                    }
+
+
+                    .grid-container {
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        grid-gap: 50px;
+                        background-color: #fff;
+                        padding: 150px;
+                        margin-top: -80px;
+                    }
+
+.grid-container > div {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 50px;
+    font-size: 30px;
+    box-shadow: 0px 0px 14px grey;
+    height: 200px;
+    width: 230px;
+}
+
+.grid-container img{
+    vertical-align: middle;
+    height: 130px;
+    width: 130px;
+}
+
+.grid-container span{
+    display: block;
+    font-size: 16px;
+    margin-top: 20px;
+    border: 1px solid gray;
+    text-align: left;
+    width: 200px;
+    margin-left: -35px;
+}
+/* end */
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container mt-3">
+        <h2>Qurikaboo Orders Grid</h2>
+                  
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Vendor</th>
+              <th>Order Date</th>
+              <th>Sales Channel</th>
+              <th>Channel PO</th>
+              <th>Glocom Order Ref</th>
+              <th>Glocom_SKU</th>
+              <th>Vendor_SKU</th>
+              <th>Product Type</th>
+              <th>Order Status</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>xxxxxxxx</td>
+              <td>xxxxxxxx</td>
+              <td>xxxxxxxx</td>
+              <td>xxxxxxxx</td>
+              <td><a data-bs-toggle="modal" data-bs-target="#myModal">xxxxxxxx</a></td>
+              <td>xxxxxxxx</td>
+              <td>xxxxxxxx</td>
+              <td>xxxxxxxx</td>
+              <td>xxxxxxxx</td>
+            </tr>
+            <tr>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td><a data-bs-toggle="modal" data-bs-target="#myModal">xxxxxxxx</a></td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+            </tr>
+            <tr>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td><a data-bs-toggle="modal" data-bs-target="#myModal">xxxxxxxx</a></td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+      
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Details</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+        
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="main_container">
+                            <ul>
+                                <li><a class="active" href="#home">Vendor</a></li>
+                                <li><a href="#news">Glocom Order Ref:<span class="identify"> 89878</span></a></li>
+                                <li><a href="#contact">Order Date:<span class="identify"> 06/01.2022</span></a></li>
+                                <li><a href="#news">Channel PO:<span class="identify"> xxxx</span></a></li>
+                                <li><a href="#contact">Order Status:<span class="identify"> active</span></a></li>
+                                
+                            </ul>
+
+                        
+
+                            <div class="tab" >
+                                <button class="tablinks" onclick="openCity(event, 'order_details')">Order Details</button>
+                                <button class="tablinks" onclick="openCity(event, 'preview')">Preview</button>
+                                <button class="tablinks" onclick="openCity(event, 'customer_zone')">Customer Zone</button>
+                                <button class="tablinks" onclick="openCity(event, 'business_zone')">Business Zone</button>
+                                <button class="tablinks" onclick="openCity(event, 'vendor_zone')">Vendor Zone</button>
+                                <button class="tablinks" onclick="openCity(event, 'process_history')">Process History</button>
+                            </div>
+                            
+                            <div id="order_details" class="tabcontent">
+                                <h3>Order Details</h3>
+                                
+                                <!-- for order content -->
+                                <div class="container">
+
+                                    <div class="row">
+                                      <div class="col-sm-4 first_cont">
+                                          <div class="first_coloumn">
+                                                <div class="col_first_content">
+                                                    <lable>Glocom_SKU </lable> <div class="back_1">xxxxxxxxx</div>
+                                                    </div>
+                                                <div class="col_first_content">  
+                                                    <lable>Vendor_SKU </lable><div class="back_1">xxxxxxxxx</div>
+                                                    </div>
+                                                <div class="col_first_content">
+                                                    <lable>Product Type </lable><div class="back_1">xxxxxxxxx</div>
+                                                    </div>
+                                                <div class="col_first_content">
+                                                    <lable>Product Name </lable><div class="back_1">xxxxxxxxx</div>
+                                                    </div>
+                                                <div class="col_first_content">
+                                                    <lable>Variation 1 </lable><div class="back_1">xxxxxxxxx</div>
+                                                    </div>
+                                                <div class="col_first_content">
+                                                    <lable>Variation 2 </lable><div class="back_1">xxxxxxxxx</div>
+                                                    </div>
+                                            </div>
+                                      </div>
+                            
+                                      <div class="col-sm-4 second_cont" >
+                                        <div class="first_coloumn">
+                                            <div class="col_first_content">
+                                                <lable>Preview Needed </lable>
+                                                  
+                                                  <div class="dropdown">
+                                                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                                                    <div id="myDropdown" class="dropdown-content">
+                                                      <a href="#home">One</a>
+                                                      <a href="#about">Two</a>
+                                                      <a href="#contact">Three</a>
+                                                    </div>
+                                                  </div>
+                            
+                            
+                                                </div>
+                                            <div class="col_first_content">  
+                                                <lable>Preview Due </lable>
+                                                    <div class="date">
+                                                         <input type="date" id="birthday" name="birthday"></div>
+                                                    </div>
+                            
+                                            <div class="col_first_content">
+                                                <lable>Preview Received </lable>
+                                                    <div class="sample_input input_one">
+                                                        <input type="text" id="fname" class="sample_input">
+                                                    </div>
+                                                </div>
+                                            <div class="col_first_content">
+                                                <lable>Revision Needed</lable>
+                                                <div class="sample_input input_two">
+                                                    <input type="text" id="fname" class="sample_input">
+                                                </div>
+                                                </div>
+                                            <div class="col_first_content">
+                                                <lable>Revision Due </lable>
+                                                <div class="sample_input input_three">
+                                                    <input type="text" id="fname" class="sample_input">
+                                                </div>
+                                                </div>
+                                            <div class="col_first_content">
+                                                <lable>Revision Received </lable>
+                                                <div class="sample_input input_four">
+                                                    <input type="text" id="fname" class="sample_input">
+                                                </div>
+                                                </div>
+                                            <div class="col_first_content">
+                                                <lable>Warehouse Delivery Due</lable>
+                                                <div class="sample_input input_five">
+                                                    <input type="text" id="fname" class="sample_input">
+                                                </div>
+                                                </div>
+                                            <div class="col_first_content">
+                                                <lable>Warehouse Delivery Received </lable>
+                                                <div class="sample_input input_six">
+                                                    <input type="text" id="fname" class="sample_input">
+                                                </div>
+                                                </div>
+                                    </div>
+                                      </div>
+                                      <div class="col-sm-4 third_cont">
+                                        <div class="first_coloumn">
+                                        <label>Customer Notes...</label>
+                                        <textarea rows="4" cols="50" placeholder="Customer Notes..."></textarea>
+                                        <label>Vendor Notes...</label>
+                                        <textarea rows="4" cols="50" ></textarea>
+                                        <label>Glocom Notes...</label>
+                                        <textarea rows="4" cols="50"></textarea>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- grid content -->
+                                <div class=" container cus_details">
+                                    <h3>Order Details</h3>
+                                    <div>
+                                      <button class="upload"><i class="fa fa-cloud-upload"></i>upload</button>
+                                      <input class="user_ref" placeholder="*update only by business users">
+                                    </div>
+                                    <div>
+                                      <div class="grid-container">
+                                          <div class="item1"><img src="https://i.guim.co.uk/img/media/f759cc2fab05664bca943dad0adc330cd0984d5e/99_0_767_959/master/767.jpg?width=300&quality=45&auto=format&fit=max&dpr=2&s=91cb5a8927dc4a6e0b44e7f6abfecef4"><span>xxxx</span></div>
+                                          
+                                          <div class="item2"><img src="https://i.pinimg.com/originals/1c/c6/bb/1cc6bb0d8279e398d675984299457a5d.png"><span>xxxx</span></div>
+                                          <div class="item3"><img src="#"><span>xxxx</span></div>  
+                                          <div class="item4"><img src="#"><span>xxxx</span></div>
+                                          <div class="item5"><img src="#"><span>xxxx</span></div>
+                                          <div class="item6"><img src="#"><span>xxxx</span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                <!-- end -->
+      
+
+                            <script>
+                            
+                                function myFunction() {
+                                  document.getElementById("myDropdown").classList.toggle("show");
+                                }
+                                window.onclick = function(event) {
+                                  if (!event.target.matches('.dropbtn')) {
+                                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                                    var i;
+                                    for (i = 0; i < dropdowns.length; i++) {
+                                      var openDropdown = dropdowns[i];
+                                      if (openDropdown.classList.contains('show')) {
+                                        openDropdown.classList.remove('show');
+                                      }
+                                    }
+                                  }
+                                }
+                                </script>
+                                <!-- end -->
+
+
+                            </div>
+                            
+                            <div id="preview" class="tabcontent">
+                                <h3>Previews</h3>
+                                <p>This is order Preview page......</p> 
+                            </div>
+                            
+                            <div id="customer_zone" class="tabcontent">
+                                <h3>Customer Zone</h3>
+                                <p>This is Customer Zone page......</p>
+                            </div>
+
+                            <div id="business_zone" class="tabcontent">
+                                <h3>Business Zone</h3>
+                                <p>This is Business Page page......</p>
+                            </div>
+
+                            <div id="vendor_zone" class="tabcontent">
+                                <h3>Vendor Zone</h3>
+                                <p>This is Vendor Zone page......</p>
+                            </div>
+
+                            <div id="process_history" class="tabcontent">
+                                <h3>Process History</h3>
+                                <p>This is Process History page......</p>
+                            </div>
+                            
+                            <script>
+                            function openCity(evt, tabName) {
+                                var i, tabcontent, tablinks;
+                                tabcontent = document.getElementsByClassName("tabcontent");
+                                for (i = 0; i < tabcontent.length; i++) {
+                                tabcontent[i].style.display = "none";
+                                }
+                                tablinks = document.getElementsByClassName("tablinks");
+                                for (i = 0; i < tablinks.length; i++) {
+                                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                                }
+                                document.getElementById(tabName).style.display = "block";
+                                evt.currentTarget.className += " active";
+                            }
+                            </script>
+                        </div>
+
+                </div>
+                </div>
+            </div>
+      </div>
+
+</body>
+</html>
