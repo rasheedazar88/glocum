@@ -1,0 +1,715 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+
+    <style>
+      * {
+        font-family: "Helvetica", Helvetica, Arial, sans-serif !important;
+      }
+
+      .table_container {
+        max-width: 1500px;
+        overflow-x: scroll;
+        margin: 0 auto;
+      }
+      .table {
+        width: max-content;
+      }
+      thead th {
+        min-width: max-content;
+      }
+
+      .modal-dialog {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+
+      .userImage {
+        width: 100px;
+      }
+
+      .userContainer {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+        align-items: center;
+      }
+
+      .userImage img {
+        width: 100px;
+        border: 1px solid rgb(114, 108, 108);
+      }
+
+      .check-box {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="table_container table-responsive">
+        <h3>Vendor List</h3>
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Vendor</th>
+              <th scope="col">Product Type</th>
+              <th scope="col">Order Ref / PO</th>
+              <th scope="col">Delivery Due</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Variation 1</th>
+              <th scope="col">Variation 2</th>
+              <th scope="col">Variation 3</th>
+              <th scope="col">Status</th>
+              <th scope="col">Customer Notes</th>
+              <th scope="col">Glocom Notes</th>
+              <th scope="col">Vendor Notes</th>
+              <th scope="col">Vendor Completion Estimate</th>
+              <th scope="col">Vendor Completed At</th>
+              <th scope="col">Vendor Processed By</th>
+              <th scope="col">Glocom Processed By</th>
+            </tr>
+          </thead>
+          <tbody class="">
+            <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+              <td>1</td>
+              <td>Yaseen</td>
+              <td>Fashion & Beauty</td>
+              <td>FC-00123</td>
+              <td>20 Days</td>
+              <td>T-shirt.</td>
+              <td>Blue</td>
+              <td>XL</td>
+              <td>Cotton</td>
+              <td>Delivered</td>
+              <td>Satisfied</td>
+              <td>Payment Received</td>
+              <td>Completed</td>
+              <td>2 Days</td>
+              <td>13-Apr-2021</td>
+              <td>Senthil</td>
+              <td>Mohamed</td>
+            </tr>
+            <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+              <td>2</td>
+              <td>Raasik</td>
+              <td>Toys, Baby & Kids</td>
+              <td>FC-00124</td>
+              <td>10 Days</td>
+              <td>Sweater</td>
+              <td>Black</td>
+              <td>XXL</td>
+              <td>Cotton</td>
+              <td>Shipped</td>
+              <td>Products Received</td>
+              <td>Paid</td>
+              <td>Pending</td>
+              <td>1 Day</td>
+              <td>14-Apr-2021</td>
+              <td>Senthil</td>
+              <td>Mohamed</td>
+            </tr>
+            <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+              <td>3</td>
+              <td>Rasheed</td>
+              <td>Electronics & Gadgets</td>
+              <td>FC-00125</td>
+              <td>15 Days</td>
+              <td>Jacket</td>
+              <td>Blue</td>
+              <td>L</td>
+              <td>Cotton</td>
+              <td>Shipped</td>
+              <td>Received in Good Quality</td>
+              <td>Pending Payment</td>
+              <td>Pending in Payment</td>
+              <td>2 Days</td>
+              <td>16-Apr-2021</td>
+              <td>Senthil</td>
+              <td>Mohamed</td>
+            </tr>
+            <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+              <td>4</td>
+              <td>Rahman</td>
+              <td>Home & Garden</td>
+              <td>FC-00126</td>
+              <td>30 Days</td>
+              <td>Coat</td>
+              <td>Blue</td>
+              <td>SM</td>
+              <td>Cotton</td>
+              <td>Delivered</td>
+              <td>Nice Quality</td>
+              <td>Paid</td>
+              <td>Completed</td>
+              <td>3 Days</td>
+              <td>13-Apr-2021</td>
+              <td>Senthil</td>
+              <td>Mohamed</td>
+            </tr>
+            <td>5</td>
+            <td>Yaseen</td>
+            <td>Fashion & Beauty</td>
+            <td>FC-00123</td>
+            <td>20 Days</td>
+            <td>T-shirt.</td>
+            <td>Blue</td>
+            <td>XL</td>
+            <td>Cotton</td>
+            <td>Delivered</td>
+            <td>Satisfied</td>
+            <td>Payment Received</td>
+            <td>Completed</td>
+            <td>2 Days</td>
+            <td>13-Apr-2021</td>
+            <td>Senthil</td>
+            <td>Mohamed</td>
+          </tr>
+          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+            <td>6</td>
+            <td>Raasik</td>
+            <td>Toys, Baby & Kids</td>
+            <td>FC-00124</td>
+            <td>10 Days</td>
+            <td>Sweater</td>
+            <td>Black</td>
+            <td>XXL</td>
+            <td>Cotton</td>
+            <td>Shipped</td>
+            <td>Products Received</td>
+            <td>Paid</td>
+            <td>Pending</td>
+            <td>1 Day</td>
+            <td>14-Apr-2021</td>
+            <td>Senthil</td>
+            <td>Mohamed</td>
+          </tr>
+          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+            <td>7</td>
+            <td>Rasheed</td>
+            <td>Electronics & Gadgets</td>
+            <td>FC-00125</td>
+            <td>15 Days</td>
+            <td>Jacket</td>
+            <td>Blue</td>
+            <td>L</td>
+            <td>Cotton</td>
+            <td>Shipped</td>
+            <td>Received in Good Quality</td>
+            <td>Pending Payment</td>
+            <td>Pending in Payment</td>
+            <td>2 Days</td>
+            <td>16-Apr-2021</td>
+            <td>Senthil</td>
+            <td>Mohamed</td>
+          </tr>
+          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+            <td>8</td>
+            <td>Rahman</td>
+            <td>Home & Garden</td>
+            <td>FC-00126</td>
+            <td>30 Days</td>
+            <td>Coat</td>
+            <td>Blue</td>
+            <td>SM</td>
+            <td>Cotton</td>
+            <td>Delivered</td>
+            <td>Nice Quality</td>
+            <td>Paid</td>
+            <td>Completed</td>
+            <td>3 Days</td>
+            <td>13-Apr-2021</td>
+            <td>Senthil</td>
+            <td>Mohamed</td>
+          </tr>
+          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+            <td>9</td>
+            <td>Rasheed</td>
+            <td>Electronics & Gadgets</td>
+            <td>FC-00125</td>
+            <td>15 Days</td>
+            <td>Jacket</td>
+            <td>Blue</td>
+            <td>L</td>
+            <td>Cotton</td>
+            <td>Shipped</td>
+            <td>Received in Good Quality</td>
+            <td>Pending Payment</td>
+            <td>Pending in Payment</td>
+            <td>2 Days</td>
+            <td>16-Apr-2021</td>
+            <td>Senthil</td>
+            <td>Mohamed</td>
+          </tr>
+          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+            <td>10</td>
+            <td>Rahman</td>
+            <td>Home & Garden</td>
+            <td>FC-00126</td>
+            <td>30 Days</td>
+            <td>Coat</td>
+            <td>Blue</td>
+            <td>SM</td>
+            <td>Cotton</td>
+            <td>Delivered</td>
+            <td>Nice Quality</td>
+            <td>Paid</td>
+            <td>Completed</td>
+            <td>3 Days</td>
+            <td>13-Apr-2021</td>
+            <td>Senthil</td>
+            <td>Mohamed</td>
+          </tr>
+          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+            <td>11</td>
+            <td>Yaseen</td>
+            <td>Fashion & Beauty</td>
+            <td>FC-00123</td>
+            <td>20 Days</td>
+            <td>T-shirt.</td>
+            <td>Blue</td>
+            <td>XL</td>
+            <td>Cotton</td>
+            <td>Delivered</td>
+            <td>Satisfied</td>
+            <td>Payment Received</td>
+            <td>Completed</td>
+            <td>2 Days</td>
+            <td>13-Apr-2021</td>
+            <td>Senthil</td>
+            <td>Mohamed</td>
+          </tr>
+          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+            <td>12</td>
+            <td>Raasik</td>
+            <td>Toys, Baby & Kids</td>
+            <td>FC-00124</td>
+            <td>10 Days</td>
+            <td>Sweater</td>
+            <td>Black</td>
+            <td>XXL</td>
+            <td>Cotton</td>
+            <td>Shipped</td>
+            <td>Products Received</td>
+            <td>Paid</td>
+            <td>Pending</td>
+            <td>1 Day</td>
+            <td>14-Apr-2021</td>
+            <td>Senthil</td>
+            <td>Mohamed</td>
+          </tr>
+          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+            <td>13</td>
+            <td>Rasheed</td>
+            <td>Electronics & Gadgets</td>
+            <td>FC-00125</td>
+            <td>15 Days</td>
+            <td>Jacket</td>
+            <td>Blue</td>
+            <td>L</td>
+            <td>Cotton</td>
+            <td>Shipped</td>
+            <td>Received in Good Quality</td>
+            <td>Pending Payment</td>
+            <td>Pending in Payment</td>
+            <td>2 Days</td>
+            <td>16-Apr-2021</td>
+            <td>Senthil</td>
+            <td>Mohamed</td>
+          </tr>
+          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+            <td>14</td>
+            <td>Rahman</td>
+            <td>Home & Garden</td>
+            <td>FC-00126</td>
+            <td>30 Days</td>
+            <td>Coat</td>
+            <td>Blue</td>
+            <td>SM</td>
+            <td>Cotton</td>
+            <td>Delivered</td>
+            <td>Nice Quality</td>
+            <td>Paid</td>
+            <td>Completed</td>
+            <td>3 Days</td>
+            <td>13-Apr-2021</td>
+            <td>Senthil</td>
+            <td>Mohamed</td>
+          </tr>
+          <td>15</td>
+          <td>Yaseen</td>
+          <td>Fashion & Beauty</td>
+          <td>FC-00123</td>
+          <td>20 Days</td>
+          <td>T-shirt.</td>
+          <td>Blue</td>
+          <td>XL</td>
+          <td>Cotton</td>
+          <td>Delivered</td>
+          <td>Satisfied</td>
+          <td>Payment Received</td>
+          <td>Completed</td>
+          <td>2 Days</td>
+          <td>13-Apr-2021</td>
+          <td>Senthil</td>
+          <td>Mohamed</td>
+        </tr>
+        <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+          <td>16</td>
+          <td>Raasik</td>
+          <td>Toys, Baby & Kids</td>
+          <td>FC-00124</td>
+          <td>10 Days</td>
+          <td>Sweater</td>
+          <td>Black</td>
+          <td>XXL</td>
+          <td>Cotton</td>
+          <td>Shipped</td>
+          <td>Products Received</td>
+          <td>Paid</td>
+          <td>Pending</td>
+          <td>1 Day</td>
+          <td>14-Apr-2021</td>
+          <td>Senthil</td>
+          <td>Mohamed</td>
+        </tr>
+        <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+          <td>17</td>
+          <td>Rasheed</td>
+          <td>Electronics & Gadgets</td>
+          <td>FC-00125</td>
+          <td>15 Days</td>
+          <td>Jacket</td>
+          <td>Blue</td>
+          <td>L</td>
+          <td>Cotton</td>
+          <td>Shipped</td>
+          <td>Received in Good Quality</td>
+          <td>Pending Payment</td>
+          <td>Pending in Payment</td>
+          <td>2 Days</td>
+          <td>16-Apr-2021</td>
+          <td>Senthil</td>
+          <td>Mohamed</td>
+        </tr>
+        <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+          <td>18</td>
+          <td>Rahman</td>
+          <td>Home & Garden</td>
+          <td>FC-00126</td>
+          <td>30 Days</td>
+          <td>Coat</td>
+          <td>Blue</td>
+          <td>SM</td>
+          <td>Cotton</td>
+          <td>Delivered</td>
+          <td>Nice Quality</td>
+          <td>Paid</td>
+          <td>Completed</td>
+          <td>3 Days</td>
+          <td>13-Apr-2021</td>
+          <td>Senthil</td>
+          <td>Mohamed</td>
+        </tr>
+        <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+          <td>19</td>
+          <td>Rasheed</td>
+          <td>Electronics & Gadgets</td>
+          <td>FC-00125</td>
+          <td>15 Days</td>
+          <td>Jacket</td>
+          <td>Blue</td>
+          <td>L</td>
+          <td>Cotton</td>
+          <td>Shipped</td>
+          <td>Received in Good Quality</td>
+          <td>Pending Payment</td>
+          <td>Pending in Payment</td>
+          <td>2 Days</td>
+          <td>16-Apr-2021</td>
+          <td>Senthil</td>
+          <td>Mohamed</td>
+        </tr>
+        <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
+          <td>20</td>
+          <td>Rahman</td>
+          <td>Home & Garden</td>
+          <td>FC-00126</td>
+          <td>30 Days</td>
+          <td>Coat</td>
+          <td>Blue</td>
+          <td>SM</td>
+          <td>Cotton</td>
+          <td>Delivered</td>
+          <td>Nice Quality</td>
+          <td>Paid</td>
+          <td>Completed</td>
+          <td>3 Days</td>
+          <td>13-Apr-2021</td>
+          <td>Senthil</td>
+          <td>Mohamed</td>
+        </tr>
+          </tbody>
+        </table>
+
+        <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                
+                  <div class="form-group row">
+                    <div class="col-md-6">
+                      
+                      <div class="card p-3">
+                      <div class="form-group row">
+                        <label for="order-date" class="col-sm-4 col-form-label">ID:</label>
+                        <div class="col-sm-8">
+                        <input type="text" class="form-control" id="order-date">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-date" class="col-sm-4 col-form-label">Order Date:</label>
+                        <div class="col-sm-8">
+                        <input type="date" class="form-control" id="order-date">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">Vendor Estimate:</label>
+                        <div class="col-sm-8">
+                          <select class="form-control">
+                            <option>1-7 Days</option>
+                            <option>15 Days</option>
+                            <option>30 Days</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">Product Type:</label>
+                        <div class="col-sm-8">
+                          <select class="form-control">
+                            <option>Fashion & Beauty</option>
+                            <option>Toys, Baby & Kids</option>
+                            <option>Electronics & Gadgets</option>
+                            <option>Home & Garden</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-4 col-form-label">Product Name:</label>
+                        <div class="col-sm-8">
+                        <input type="search" class="form-control" id="order-search">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-4 col-form-label">Variation 1:</label>
+                        <div class="col-sm-8">
+                          <select class="form-control">
+                            <option>SM</option>
+                            <option>L</option>
+                            <option>XL</option>
+                          </select>
+                        </div>
+                      </div>
+                     
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-4 col-form-label">Variation 2:</label>
+                        <div class="col-sm-8">
+                          <select class="form-control">
+                            <option>Green</option>
+                            <option>Blue</option>
+                            <option>White</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-4 col-form-label">Variation 3:</label>
+                        <div class="col-sm-8">
+                          <select class="form-control">
+                            <option>Fabric</option>
+                            <option>Cotton</option>
+                            <option>Jeans</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-4 col-form-label">Customer Notes: </label>
+                        <div class="col-sm-8">
+                         <textarea class="form-control"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-4 col-form-label">Vendor Notes: </label>
+                        <div class="col-sm-8">
+                         <textarea class="form-control"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-4 col-form-label">Glocom Notes: </label>
+                        <div class="col-sm-8">
+                         <textarea class="form-control"></textarea>
+                        </div>
+                      </div>
+
+                     </div>
+
+                    </div>
+                    <div class="col-md-3">
+                      
+                    <div class="card row mb-2" >
+                      
+                        <caption><b class="p-2">Delivery Details</b></caption>
+                       
+                        <div class="form-group mb-1 p-2" style="display: flex; justify-content: space-between;">
+                          <p class="">Delivery Due</p>
+                          <input type="text" class="form-control" style="width: 100px;" />
+                        </div>
+
+                        <div class="form-group mb-1 p-2" style="display: flex; justify-content: space-between;">
+                          <p class="">Vendor Completion Estimate</p>
+                          <select class="form-control" style="width: fit-content;">
+                            <option>1-7 Days</option>
+                            <option>15 Days</option>
+                            <option>30 Days</option>
+                          </select>
+                        </div>
+                      
+                    </div>
+
+                    <div class="card row">
+                      <div class="userContainer">
+                        <div class="userImage">
+                          <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" class="rounded" alt="">
+                        </div>
+                        <div class="userImage">
+                          <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" class="rounded" alt="">
+                        </div>
+                      </div>
+
+                      <div class="userContainer">
+                        <div class="userImage">
+                          <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" class="rounded" alt="">
+                        </div>
+                        <div class="userImage">
+                          <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" class="rounded" alt="">
+                        </div>
+                      </div>
+
+                      <div class="userContainer">
+                        <div class="userImage">
+                          <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" class="rounded" alt="">
+                        </div>
+                        <div class="userImage">
+                          <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" class="rounded" alt="">
+                        </div>
+                      </div>
+
+                      <div class="userContainer">
+                      <label class="form-control">Custom Text</label>
+                      <label class="form-control">Custom Text</label>
+                      </div>
+                    </div>
+                    </div>
+                   
+
+                    <div class="col-md-3">
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-12 col-form-label">Customer Notes Vendor Check</label>                        <div class="col-sm-12">
+                         <input class="form-control" type="text">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-12 col-form-label">Glocom Notes Vendor Check</label>                        <div class="col-sm-12">
+                         <input class="form-control" type="text">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-12 col-form-label">Customer Notes Glocom Check</label>
+                        <div class="col-sm-12">
+                          <input class="form-control" type="text">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-12 col-form-label">Glocom Notes Glocom Check</label>
+                        <div class="col-sm-12">
+                          <input class="form-control" type="text">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-12 col-form-label">Vendor Notes Glocom Check</label>
+                        <div class="col-sm-12">                                                    
+                          <div class="check-box">
+                          <input type="checkbox" class="form-check-input" id="" name="" value=""><lable>Checked</lable>
+                        </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-12 col-form-label">Vendor Processed By</label>
+                        <div class="col-sm-12">
+                          <b>Mr.Mahesh</b>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="order-search" class="col-sm-12 col-form-label">Glocom Processed By</label>
+                        <div class="col-sm-12">
+                         <b>Mr.Yuvaraj</b>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

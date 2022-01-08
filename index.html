@@ -1,715 +1,603 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <title>Document</title>
+<html>
+<head>
+    <title>vendor list</title>
+    <link href="http://fonts.cdnfonts.com/css/cerebri-sans" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+   
+
 
     <style>
-      * {
-        font-family: "Helvetica", Helvetica, Arial, sans-serif !important;
-      }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: "Cerebri Sans",sans-serif;
+            font-size: .9375rem;
+            font-weight: 400;
+        }
+        .table-striped thead{
+            background-color: rgb(75, 69, 69);
+            color: #fff;
+        }
+        .table-striped tbody{
+            text-align: center;
+        }
+        .table-striped tbody a{
+            cursor: pointer;
+            color: rgb(113, 100, 230) !important;
+        }
 
-      .table_container {
-        max-width: 1500px;
-        overflow-x: scroll;
-        margin: 0 auto;
-      }
-      .table {
-        width: max-content;
-      }
-      thead th {
-        min-width: max-content;
-      }
+        
+        .modal.show .modal-dialog{
+            max-width: 99.5% !important;
+        }
 
-      .modal-dialog {
-        max-width: 100%;
-        padding: 0 20px;
-      }
+        .modal-header{
+            padding: 0.5rem 1rem !important;
+            background-color: rgb(75, 69, 69);
+            color: #fff !important;
+        }
 
-      .userImage {
-        width: 100px;
-      }
+        
+        .btn-close{
+            filter: invert(1) !important;
+        }
 
-      .userContainer {
-        display: flex;
-        justify-content: space-around;
-        margin: 20px 0;
-        align-items: center;
-      }
 
-      .userImage img {
-        width: 100px;
-        border: 1px solid rgb(114, 108, 108);
-      }
+        .modal-body ul {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 48px;
+            overflow: hidden;
+            border-radius: 5px;
+            font-family: inherit;
+            }
 
-      .check-box {
-        margin-left: 20px;
-      }
+        .modal-body li {
+            float: left;
+            margin: 20px 40px 20px 45px;
+            font-family: inherit;
+            border: 1px solid #80808069;
+            border-radius: 10px;
+        }
+
+        .modal-body li a {
+            display: block;
+            color: #0e0e0e;
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-family: inherit;
+        }
+
+        .modal-body li a:hover {
+            background-color: #dad4d42b;
+            color:black;
+        }
+
+
+
+
+        
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 20px;
+    line-height: 20px;
+    border-bottom: 0.5px solid #80808014;
+    padding-bottom: 25px;
+}
+
+
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: #918c8c;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 5px;
+    margin: 10px 0px 10px 2px;
+    color: #fff;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #9f9999;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #d7d6d6;
+    border-radius: 5px;
+    color: black;
+    font-size: 18px;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;  
+}
+
+
+/* for order details content */
+.container{
+        margin-top: 30px;
+    }
+    .first_cont{
+        width: 28% !important;
+    }
+
+    .second_cont{
+        width: 43% !important;
+    }
+
+    .third_cont{
+        width: 27% !important;
+    }
+
+ .col-sm-4 .lab_cont label{
+        display: block !important;
+    }
+    .first_cont, .second_cont, .third_cont{
+        background-color: #fff;
+        overflow: hidden;
+    }
+    .first_coloumn{
+        box-shadow: 0px 0px 10px 1px #80808070;
+        padding: 10px 30px;
+        margin: 20px 10px ;
+    }
+    .col_first_content{
+        margin: 50px 0px;
+    }
+
+
+    textarea{
+        resize: vertical;
+        height: 100px;
+        width: 200px;
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+   
+
+                .dropbtn {
+                    color: #161616;
+                    padding: 5px 45px;
+                    font-size: 13px;
+                    border: none;
+                    cursor: pointer;
+                    margin-left: 40px !important;
+                    border-radius: 5px;
+                      }
+                      .dropdown{
+                        margin-left: 70px ;
+                      }
+                      
+                      .dropbtn:hover, .dropbtn:focus {
+                        background-color: #d2d7da;
+                      }
+                      
+                      .dropdown, .date, .sample_input {
+                        position: relative;
+                        display: inline-block;
+                      }
+                      
+                      .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        background-color: #f5f5f5;
+                        min-width: 160px;
+                        overflow: auto;
+                        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+                        z-index: 1;
+                        border-radius: 5px;
+                        margin-left: 33px;
+                      }
+                      
+                      .dropdown-content a {
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                      }
+                      
+                      .dropdown a:hover {background-color: #fff;}
+                      
+                      .show {display: block;}
+
+                      .date #birthday{
+                        width: 150px;
+                        margin-left: 135px;
+                        height: 28;
+                      }
+
+                      .sample_input{
+                        width: 150px;
+                        height: 28px;
+                      }
+                      .input_one{
+                          margin-left: 103px;
+                      }
+                      .input_two{
+                          margin-left: 104px;
+                      }
+                      .input_three{
+                          margin-left: 131px;
+                      }
+                      .input_four{
+                          margin-left: 97px;
+                      }
+                      .input_five{
+                          margin-left: 51px;
+                      }
+                      .input_six{
+                          margin-left: 15px;
+                      }
+                      .third_cont label{
+                          font-size: 13px;
+                      }
+                     
+/* end */
+
+/* for grid content */
+.upload{
+                        border-radius: 5px;
+                        padding: 10px 35px;
+                        font-size: 25px;
+                        border: 1px solid #05057f;
+                        margin: 20px 30px;
+                        font-weight: 350;
+                        background-color: #fff;
+                        color: #05057f;
+                      }
+                      .upload:hover{
+                        background-color: #e3e3e37a;
+                      }
+
+                    .cus_details input{
+                        border: 1px solid #a6a6a7;
+                    }
+                    .cus_details i{
+                        margin-right: 10px;
+                    }
+
+
+                    .grid-container {
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        grid-gap: 50px;
+                        background-color: #fff;
+                        padding: 150px;
+                        margin-top: -80px;
+                    }
+
+.grid-container > div {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 50px;
+    font-size: 30px;
+    box-shadow: 0px 0px 14px grey;
+    height: 200px;
+    width: 230px;
+}
+
+.grid-container img{
+    vertical-align: middle;
+    height: 130px;
+    width: 130px;
+}
+
+.grid-container span{
+    display: block;
+    font-size: 16px;
+    margin-top: 20px;
+    border: 1px solid gray;
+    text-align: left;
+    width: 200px;
+    margin-left: -35px;
+}
+/* end */
+
     </style>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="table_container table-responsive">
-        <h3>Vendor List</h3>
+
+</head>
+<body>
+
+    <div class="container mt-3">
+        <h2>Qurikaboo Orders Grid</h2>
+                  
         <table class="table table-striped">
-          <thead class="thead-dark">
+          <thead>
             <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Vendor</th>
-              <th scope="col">Product Type</th>
-              <th scope="col">Order Ref / PO</th>
-              <th scope="col">Delivery Due</th>
-              <th scope="col">Product Name</th>
-              <th scope="col">Variation 1</th>
-              <th scope="col">Variation 2</th>
-              <th scope="col">Variation 3</th>
-              <th scope="col">Status</th>
-              <th scope="col">Customer Notes</th>
-              <th scope="col">Glocom Notes</th>
-              <th scope="col">Vendor Notes</th>
-              <th scope="col">Vendor Completion Estimate</th>
-              <th scope="col">Vendor Completed At</th>
-              <th scope="col">Vendor Processed By</th>
-              <th scope="col">Glocom Processed By</th>
+              <th>Vendor</th>
+              <th>Order Date</th>
+              <th>Sales Channel</th>
+              <th>Channel PO</th>
+              <th>Glocom Order Ref</th>
+              <th>Glocom_SKU</th>
+              <th>Vendor_SKU</th>
+              <th>Product Type</th>
+              <th>Order Status</th>
+
             </tr>
           </thead>
-          <tbody class="">
-            <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-              <td>1</td>
-              <td>Yaseen</td>
-              <td>Fashion & Beauty</td>
-              <td>FC-00123</td>
-              <td>20 Days</td>
-              <td>T-shirt.</td>
-              <td>Blue</td>
-              <td>XL</td>
-              <td>Cotton</td>
-              <td>Delivered</td>
-              <td>Satisfied</td>
-              <td>Payment Received</td>
-              <td>Completed</td>
-              <td>2 Days</td>
-              <td>13-Apr-2021</td>
-              <td>Senthil</td>
-              <td>Mohamed</td>
+          <tbody>
+            <tr>
+              <td>xxxxxxxx</td>
+              <td>xxxxxxxx</td>
+              <td>xxxxxxxx</td>
+              <td>xxxxxxxx</td>
+              <td><a data-bs-toggle="modal" data-bs-target="#myModal">xxxxxxxx</a></td>
+              <td>xxxxxxxx</td>
+              <td>xxxxxxxx</td>
+              <td>xxxxxxxx</td>
+              <td>xxxxxxxx</td>
             </tr>
-            <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-              <td>2</td>
-              <td>Raasik</td>
-              <td>Toys, Baby & Kids</td>
-              <td>FC-00124</td>
-              <td>10 Days</td>
-              <td>Sweater</td>
-              <td>Black</td>
-              <td>XXL</td>
-              <td>Cotton</td>
-              <td>Shipped</td>
-              <td>Products Received</td>
-              <td>Paid</td>
-              <td>Pending</td>
-              <td>1 Day</td>
-              <td>14-Apr-2021</td>
-              <td>Senthil</td>
-              <td>Mohamed</td>
+            <tr>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td><a data-bs-toggle="modal" data-bs-target="#myModal">xxxxxxxx</a></td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
             </tr>
-            <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-              <td>3</td>
-              <td>Rasheed</td>
-              <td>Electronics & Gadgets</td>
-              <td>FC-00125</td>
-              <td>15 Days</td>
-              <td>Jacket</td>
-              <td>Blue</td>
-              <td>L</td>
-              <td>Cotton</td>
-              <td>Shipped</td>
-              <td>Received in Good Quality</td>
-              <td>Pending Payment</td>
-              <td>Pending in Payment</td>
-              <td>2 Days</td>
-              <td>16-Apr-2021</td>
-              <td>Senthil</td>
-              <td>Mohamed</td>
+            <tr>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td><a data-bs-toggle="modal" data-bs-target="#myModal">xxxxxxxx</a></td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
+                <td>xxxxxxxx</td>
             </tr>
-            <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-              <td>4</td>
-              <td>Rahman</td>
-              <td>Home & Garden</td>
-              <td>FC-00126</td>
-              <td>30 Days</td>
-              <td>Coat</td>
-              <td>Blue</td>
-              <td>SM</td>
-              <td>Cotton</td>
-              <td>Delivered</td>
-              <td>Nice Quality</td>
-              <td>Paid</td>
-              <td>Completed</td>
-              <td>3 Days</td>
-              <td>13-Apr-2021</td>
-              <td>Senthil</td>
-              <td>Mohamed</td>
-            </tr>
-            <td>5</td>
-            <td>Yaseen</td>
-            <td>Fashion & Beauty</td>
-            <td>FC-00123</td>
-            <td>20 Days</td>
-            <td>T-shirt.</td>
-            <td>Blue</td>
-            <td>XL</td>
-            <td>Cotton</td>
-            <td>Delivered</td>
-            <td>Satisfied</td>
-            <td>Payment Received</td>
-            <td>Completed</td>
-            <td>2 Days</td>
-            <td>13-Apr-2021</td>
-            <td>Senthil</td>
-            <td>Mohamed</td>
-          </tr>
-          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-            <td>6</td>
-            <td>Raasik</td>
-            <td>Toys, Baby & Kids</td>
-            <td>FC-00124</td>
-            <td>10 Days</td>
-            <td>Sweater</td>
-            <td>Black</td>
-            <td>XXL</td>
-            <td>Cotton</td>
-            <td>Shipped</td>
-            <td>Products Received</td>
-            <td>Paid</td>
-            <td>Pending</td>
-            <td>1 Day</td>
-            <td>14-Apr-2021</td>
-            <td>Senthil</td>
-            <td>Mohamed</td>
-          </tr>
-          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-            <td>7</td>
-            <td>Rasheed</td>
-            <td>Electronics & Gadgets</td>
-            <td>FC-00125</td>
-            <td>15 Days</td>
-            <td>Jacket</td>
-            <td>Blue</td>
-            <td>L</td>
-            <td>Cotton</td>
-            <td>Shipped</td>
-            <td>Received in Good Quality</td>
-            <td>Pending Payment</td>
-            <td>Pending in Payment</td>
-            <td>2 Days</td>
-            <td>16-Apr-2021</td>
-            <td>Senthil</td>
-            <td>Mohamed</td>
-          </tr>
-          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-            <td>8</td>
-            <td>Rahman</td>
-            <td>Home & Garden</td>
-            <td>FC-00126</td>
-            <td>30 Days</td>
-            <td>Coat</td>
-            <td>Blue</td>
-            <td>SM</td>
-            <td>Cotton</td>
-            <td>Delivered</td>
-            <td>Nice Quality</td>
-            <td>Paid</td>
-            <td>Completed</td>
-            <td>3 Days</td>
-            <td>13-Apr-2021</td>
-            <td>Senthil</td>
-            <td>Mohamed</td>
-          </tr>
-          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-            <td>9</td>
-            <td>Rasheed</td>
-            <td>Electronics & Gadgets</td>
-            <td>FC-00125</td>
-            <td>15 Days</td>
-            <td>Jacket</td>
-            <td>Blue</td>
-            <td>L</td>
-            <td>Cotton</td>
-            <td>Shipped</td>
-            <td>Received in Good Quality</td>
-            <td>Pending Payment</td>
-            <td>Pending in Payment</td>
-            <td>2 Days</td>
-            <td>16-Apr-2021</td>
-            <td>Senthil</td>
-            <td>Mohamed</td>
-          </tr>
-          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-            <td>10</td>
-            <td>Rahman</td>
-            <td>Home & Garden</td>
-            <td>FC-00126</td>
-            <td>30 Days</td>
-            <td>Coat</td>
-            <td>Blue</td>
-            <td>SM</td>
-            <td>Cotton</td>
-            <td>Delivered</td>
-            <td>Nice Quality</td>
-            <td>Paid</td>
-            <td>Completed</td>
-            <td>3 Days</td>
-            <td>13-Apr-2021</td>
-            <td>Senthil</td>
-            <td>Mohamed</td>
-          </tr>
-          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-            <td>11</td>
-            <td>Yaseen</td>
-            <td>Fashion & Beauty</td>
-            <td>FC-00123</td>
-            <td>20 Days</td>
-            <td>T-shirt.</td>
-            <td>Blue</td>
-            <td>XL</td>
-            <td>Cotton</td>
-            <td>Delivered</td>
-            <td>Satisfied</td>
-            <td>Payment Received</td>
-            <td>Completed</td>
-            <td>2 Days</td>
-            <td>13-Apr-2021</td>
-            <td>Senthil</td>
-            <td>Mohamed</td>
-          </tr>
-          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-            <td>12</td>
-            <td>Raasik</td>
-            <td>Toys, Baby & Kids</td>
-            <td>FC-00124</td>
-            <td>10 Days</td>
-            <td>Sweater</td>
-            <td>Black</td>
-            <td>XXL</td>
-            <td>Cotton</td>
-            <td>Shipped</td>
-            <td>Products Received</td>
-            <td>Paid</td>
-            <td>Pending</td>
-            <td>1 Day</td>
-            <td>14-Apr-2021</td>
-            <td>Senthil</td>
-            <td>Mohamed</td>
-          </tr>
-          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-            <td>13</td>
-            <td>Rasheed</td>
-            <td>Electronics & Gadgets</td>
-            <td>FC-00125</td>
-            <td>15 Days</td>
-            <td>Jacket</td>
-            <td>Blue</td>
-            <td>L</td>
-            <td>Cotton</td>
-            <td>Shipped</td>
-            <td>Received in Good Quality</td>
-            <td>Pending Payment</td>
-            <td>Pending in Payment</td>
-            <td>2 Days</td>
-            <td>16-Apr-2021</td>
-            <td>Senthil</td>
-            <td>Mohamed</td>
-          </tr>
-          <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-            <td>14</td>
-            <td>Rahman</td>
-            <td>Home & Garden</td>
-            <td>FC-00126</td>
-            <td>30 Days</td>
-            <td>Coat</td>
-            <td>Blue</td>
-            <td>SM</td>
-            <td>Cotton</td>
-            <td>Delivered</td>
-            <td>Nice Quality</td>
-            <td>Paid</td>
-            <td>Completed</td>
-            <td>3 Days</td>
-            <td>13-Apr-2021</td>
-            <td>Senthil</td>
-            <td>Mohamed</td>
-          </tr>
-          <td>15</td>
-          <td>Yaseen</td>
-          <td>Fashion & Beauty</td>
-          <td>FC-00123</td>
-          <td>20 Days</td>
-          <td>T-shirt.</td>
-          <td>Blue</td>
-          <td>XL</td>
-          <td>Cotton</td>
-          <td>Delivered</td>
-          <td>Satisfied</td>
-          <td>Payment Received</td>
-          <td>Completed</td>
-          <td>2 Days</td>
-          <td>13-Apr-2021</td>
-          <td>Senthil</td>
-          <td>Mohamed</td>
-        </tr>
-        <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-          <td>16</td>
-          <td>Raasik</td>
-          <td>Toys, Baby & Kids</td>
-          <td>FC-00124</td>
-          <td>10 Days</td>
-          <td>Sweater</td>
-          <td>Black</td>
-          <td>XXL</td>
-          <td>Cotton</td>
-          <td>Shipped</td>
-          <td>Products Received</td>
-          <td>Paid</td>
-          <td>Pending</td>
-          <td>1 Day</td>
-          <td>14-Apr-2021</td>
-          <td>Senthil</td>
-          <td>Mohamed</td>
-        </tr>
-        <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-          <td>17</td>
-          <td>Rasheed</td>
-          <td>Electronics & Gadgets</td>
-          <td>FC-00125</td>
-          <td>15 Days</td>
-          <td>Jacket</td>
-          <td>Blue</td>
-          <td>L</td>
-          <td>Cotton</td>
-          <td>Shipped</td>
-          <td>Received in Good Quality</td>
-          <td>Pending Payment</td>
-          <td>Pending in Payment</td>
-          <td>2 Days</td>
-          <td>16-Apr-2021</td>
-          <td>Senthil</td>
-          <td>Mohamed</td>
-        </tr>
-        <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-          <td>18</td>
-          <td>Rahman</td>
-          <td>Home & Garden</td>
-          <td>FC-00126</td>
-          <td>30 Days</td>
-          <td>Coat</td>
-          <td>Blue</td>
-          <td>SM</td>
-          <td>Cotton</td>
-          <td>Delivered</td>
-          <td>Nice Quality</td>
-          <td>Paid</td>
-          <td>Completed</td>
-          <td>3 Days</td>
-          <td>13-Apr-2021</td>
-          <td>Senthil</td>
-          <td>Mohamed</td>
-        </tr>
-        <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-          <td>19</td>
-          <td>Rasheed</td>
-          <td>Electronics & Gadgets</td>
-          <td>FC-00125</td>
-          <td>15 Days</td>
-          <td>Jacket</td>
-          <td>Blue</td>
-          <td>L</td>
-          <td>Cotton</td>
-          <td>Shipped</td>
-          <td>Received in Good Quality</td>
-          <td>Pending Payment</td>
-          <td>Pending in Payment</td>
-          <td>2 Days</td>
-          <td>16-Apr-2021</td>
-          <td>Senthil</td>
-          <td>Mohamed</td>
-        </tr>
-        <tr scope="row" data-toggle="modal" data-id="1" data-target="#Modal"> 
-          <td>20</td>
-          <td>Rahman</td>
-          <td>Home & Garden</td>
-          <td>FC-00126</td>
-          <td>30 Days</td>
-          <td>Coat</td>
-          <td>Blue</td>
-          <td>SM</td>
-          <td>Cotton</td>
-          <td>Delivered</td>
-          <td>Nice Quality</td>
-          <td>Paid</td>
-          <td>Completed</td>
-          <td>3 Days</td>
-          <td>13-Apr-2021</td>
-          <td>Senthil</td>
-          <td>Mohamed</td>
-        </tr>
           </tbody>
         </table>
-
-        <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Details</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                
-                  <div class="form-group row">
-                    <div class="col-md-6">
-                      
-                      <div class="card p-3">
-                      <div class="form-group row">
-                        <label for="order-date" class="col-sm-4 col-form-label">ID:</label>
-                        <div class="col-sm-8">
-                        <input type="text" class="form-control" id="order-date">
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-date" class="col-sm-4 col-form-label">Order Date:</label>
-                        <div class="col-sm-8">
-                        <input type="date" class="form-control" id="order-date">
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="" class="col-sm-4 col-form-label">Vendor Estimate:</label>
-                        <div class="col-sm-8">
-                          <select class="form-control">
-                            <option>1-7 Days</option>
-                            <option>15 Days</option>
-                            <option>30 Days</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="" class="col-sm-4 col-form-label">Product Type:</label>
-                        <div class="col-sm-8">
-                          <select class="form-control">
-                            <option>Fashion & Beauty</option>
-                            <option>Toys, Baby & Kids</option>
-                            <option>Electronics & Gadgets</option>
-                            <option>Home & Garden</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-4 col-form-label">Product Name:</label>
-                        <div class="col-sm-8">
-                        <input type="search" class="form-control" id="order-search">
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-4 col-form-label">Variation 1:</label>
-                        <div class="col-sm-8">
-                          <select class="form-control">
-                            <option>SM</option>
-                            <option>L</option>
-                            <option>XL</option>
-                          </select>
-                        </div>
-                      </div>
-                     
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-4 col-form-label">Variation 2:</label>
-                        <div class="col-sm-8">
-                          <select class="form-control">
-                            <option>Green</option>
-                            <option>Blue</option>
-                            <option>White</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-4 col-form-label">Variation 3:</label>
-                        <div class="col-sm-8">
-                          <select class="form-control">
-                            <option>Fabric</option>
-                            <option>Cotton</option>
-                            <option>Jeans</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-4 col-form-label">Customer Notes: </label>
-                        <div class="col-sm-8">
-                         <textarea class="form-control"></textarea>
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-4 col-form-label">Vendor Notes: </label>
-                        <div class="col-sm-8">
-                         <textarea class="form-control"></textarea>
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-4 col-form-label">Glocom Notes: </label>
-                        <div class="col-sm-8">
-                         <textarea class="form-control"></textarea>
-                        </div>
-                      </div>
-
-                     </div>
-
-                    </div>
-                    <div class="col-md-3">
-                      
-                    <div class="card row mb-2" >
-                      
-                        <caption><b class="p-2">Delivery Details</b></caption>
-                       
-                        <div class="form-group mb-1 p-2" style="display: flex; justify-content: space-between;">
-                          <p class="">Delivery Due</p>
-                          <input type="text" class="form-control" style="width: 100px;" />
-                        </div>
-
-                        <div class="form-group mb-1 p-2" style="display: flex; justify-content: space-between;">
-                          <p class="">Vendor Completion Estimate</p>
-                          <select class="form-control" style="width: fit-content;">
-                            <option>1-7 Days</option>
-                            <option>15 Days</option>
-                            <option>30 Days</option>
-                          </select>
-                        </div>
-                      
-                    </div>
-
-                    <div class="card row">
-                      <div class="userContainer">
-                        <div class="userImage">
-                          <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" class="rounded" alt="">
-                        </div>
-                        <div class="userImage">
-                          <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" class="rounded" alt="">
-                        </div>
-                      </div>
-
-                      <div class="userContainer">
-                        <div class="userImage">
-                          <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" class="rounded" alt="">
-                        </div>
-                        <div class="userImage">
-                          <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" class="rounded" alt="">
-                        </div>
-                      </div>
-
-                      <div class="userContainer">
-                        <div class="userImage">
-                          <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" class="rounded" alt="">
-                        </div>
-                        <div class="userImage">
-                          <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" class="rounded" alt="">
-                        </div>
-                      </div>
-
-                      <div class="userContainer">
-                      <label class="form-control">Custom Text</label>
-                      <label class="form-control">Custom Text</label>
-                      </div>
-                    </div>
-                    </div>
-                   
-
-                    <div class="col-md-3">
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-12 col-form-label">Customer Notes Vendor Check</label>                        <div class="col-sm-12">
-                         <input class="form-control" type="text">
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-12 col-form-label">Glocom Notes Vendor Check</label>                        <div class="col-sm-12">
-                         <input class="form-control" type="text">
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-12 col-form-label">Customer Notes Glocom Check</label>
-                        <div class="col-sm-12">
-                          <input class="form-control" type="text">
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-12 col-form-label">Glocom Notes Glocom Check</label>
-                        <div class="col-sm-12">
-                          <input class="form-control" type="text">
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-12 col-form-label">Vendor Notes Glocom Check</label>
-                        <div class="col-sm-12">                                                    
-                          <div class="check-box">
-                          <input type="checkbox" class="form-check-input" id="" name="" value=""><lable>Checked</lable>
-                        </div>
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-12 col-form-label">Vendor Processed By</label>
-                        <div class="col-sm-12">
-                          <b>Mr.Mahesh</b>
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                        <label for="order-search" class="col-sm-12 col-form-label">Glocom Processed By</label>
-                        <div class="col-sm-12">
-                         <b>Mr.Yuvaraj</b>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+      
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Details</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+        
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="main_container">
+                            <ul>
+                                <li><a class="active" href="#home">Vendor</a></li>
+                                <li><a href="#news">Glocom Order Ref:<span class="identify"> 89878</span></a></li>
+                                <li><a href="#contact">Order Date:<span class="identify"> 06/01.2022</span></a></li>
+                                <li><a href="#news">Channel PO:<span class="identify"> xxxx</span></a></li>
+                                <li><a href="#contact">Order Status:<span class="identify"> active</span></a></li>
+                                
+                            </ul>
+
+                        
+
+                            <div class="tab" >
+                                <button class="tablinks" onclick="openCity(event, 'order_details')">Order Details</button>
+                                <button class="tablinks" onclick="openCity(event, 'preview')">Preview</button>
+                                <button class="tablinks" onclick="openCity(event, 'customer_zone')">Customer Zone</button>
+                                <button class="tablinks" onclick="openCity(event, 'business_zone')">Business Zone</button>
+                                <button class="tablinks" onclick="openCity(event, 'vendor_zone')">Vendor Zone</button>
+                                <button class="tablinks" onclick="openCity(event, 'process_history')">Process History</button>
+                            </div>
+                            
+                            <div id="order_details" class="tabcontent">
+                                <h3>Order Details</h3>
+                                
+                                <!-- for order content -->
+                                <div class="container">
+
+                                    <div class="row">
+                                      <div class="col-sm-4 first_cont">
+                                          <div class="first_coloumn">
+                                                <div class="col_first_content">
+                                                    <lable>Glocom_SKU </lable> <div class="back_1">xxxxxxxxx</div>
+                                                    </div>
+                                                <div class="col_first_content">  
+                                                    <lable>Vendor_SKU </lable><div class="back_1">xxxxxxxxx</div>
+                                                    </div>
+                                                <div class="col_first_content">
+                                                    <lable>Product Type </lable><div class="back_1">xxxxxxxxx</div>
+                                                    </div>
+                                                <div class="col_first_content">
+                                                    <lable>Product Name </lable><div class="back_1">xxxxxxxxx</div>
+                                                    </div>
+                                                <div class="col_first_content">
+                                                    <lable>Variation 1 </lable><div class="back_1">xxxxxxxxx</div>
+                                                    </div>
+                                                <div class="col_first_content">
+                                                    <lable>Variation 2 </lable><div class="back_1">xxxxxxxxx</div>
+                                                    </div>
+                                            </div>
+                                      </div>
+                            
+                                      <div class="col-sm-4 second_cont" >
+                                        <div class="first_coloumn">
+                                            <div class="col_first_content">
+                                                <lable>Preview Needed </lable>
+                                                  
+                                                  <div class="dropdown">
+                                                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                                                    <div id="myDropdown" class="dropdown-content">
+                                                      <a href="#home">One</a>
+                                                      <a href="#about">Two</a>
+                                                      <a href="#contact">Three</a>
+                                                    </div>
+                                                  </div>
+                            
+                            
+                                                </div>
+                                            <div class="col_first_content">  
+                                                <lable>Preview Due </lable>
+                                                    <div class="date">
+                                                         <input type="date" id="birthday" name="birthday"></div>
+                                                    </div>
+                            
+                                            <div class="col_first_content">
+                                                <lable>Preview Received </lable>
+                                                    <div class="sample_input input_one">
+                                                        <input type="text" id="fname" class="sample_input">
+                                                    </div>
+                                                </div>
+                                            <div class="col_first_content">
+                                                <lable>Revision Needed</lable>
+                                                <div class="sample_input input_two">
+                                                    <input type="text" id="fname" class="sample_input">
+                                                </div>
+                                                </div>
+                                            <div class="col_first_content">
+                                                <lable>Revision Due </lable>
+                                                <div class="sample_input input_three">
+                                                    <input type="text" id="fname" class="sample_input">
+                                                </div>
+                                                </div>
+                                            <div class="col_first_content">
+                                                <lable>Revision Received </lable>
+                                                <div class="sample_input input_four">
+                                                    <input type="text" id="fname" class="sample_input">
+                                                </div>
+                                                </div>
+                                            <div class="col_first_content">
+                                                <lable>Warehouse Delivery Due</lable>
+                                                <div class="sample_input input_five">
+                                                    <input type="text" id="fname" class="sample_input">
+                                                </div>
+                                                </div>
+                                            <div class="col_first_content">
+                                                <lable>Warehouse Delivery Received </lable>
+                                                <div class="sample_input input_six">
+                                                    <input type="text" id="fname" class="sample_input">
+                                                </div>
+                                                </div>
+                                    </div>
+                                      </div>
+                                      <div class="col-sm-4 third_cont">
+                                        <div class="first_coloumn">
+                                        <label>Customer Notes...</label>
+                                        <textarea rows="4" cols="50" placeholder="Customer Notes..."></textarea>
+                                        <label>Vendor Notes...</label>
+                                        <textarea rows="4" cols="50" ></textarea>
+                                        <label>Glocom Notes...</label>
+                                        <textarea rows="4" cols="50"></textarea>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- grid content -->
+                                <div class=" container cus_details">
+                                    <h3>Order Details</h3>
+                                    <div>
+                                      <button class="upload"><i class="fa fa-cloud-upload"></i>upload</button>
+                                      <input class="user_ref" placeholder="*update only by business users">
+                                    </div>
+                                    <div>
+                                      <div class="grid-container">
+                                          <div class="item1"><img src="https://i.guim.co.uk/img/media/f759cc2fab05664bca943dad0adc330cd0984d5e/99_0_767_959/master/767.jpg?width=300&quality=45&auto=format&fit=max&dpr=2&s=91cb5a8927dc4a6e0b44e7f6abfecef4"><span>xxxx</span></div>
+                                          
+                                          <div class="item2"><img src="https://i.pinimg.com/originals/1c/c6/bb/1cc6bb0d8279e398d675984299457a5d.png"><span>xxxx</span></div>
+                                          <div class="item3"><img src="#"><span>xxxx</span></div>  
+                                          <div class="item4"><img src="#"><span>xxxx</span></div>
+                                          <div class="item5"><img src="#"><span>xxxx</span></div>
+                                          <div class="item6"><img src="#"><span>xxxx</span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                <!-- end -->
+      
+
+                            <script>
+                            
+                                function myFunction() {
+                                  document.getElementById("myDropdown").classList.toggle("show");
+                                }
+                                window.onclick = function(event) {
+                                  if (!event.target.matches('.dropbtn')) {
+                                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                                    var i;
+                                    for (i = 0; i < dropdowns.length; i++) {
+                                      var openDropdown = dropdowns[i];
+                                      if (openDropdown.classList.contains('show')) {
+                                        openDropdown.classList.remove('show');
+                                      }
+                                    }
+                                  }
+                                }
+                                </script>
+                                <!-- end -->
+
+
+                            </div>
+                            
+                            <div id="preview" class="tabcontent">
+                                <h3>Previews</h3>
+                                <p>This is order Preview page......</p> 
+                            </div>
+                            
+                            <div id="customer_zone" class="tabcontent">
+                                <h3>Customer Zone</h3>
+                                <p>This is Customer Zone page......</p>
+                            </div>
+
+                            <div id="business_zone" class="tabcontent">
+                                <h3>Business Zone</h3>
+                                <p>This is Business Page page......</p>
+                            </div>
+
+                            <div id="vendor_zone" class="tabcontent">
+                                <h3>Vendor Zone</h3>
+                                <p>This is Vendor Zone page......</p>
+                            </div>
+
+                            <div id="process_history" class="tabcontent">
+                                <h3>Process History</h3>
+                                <p>This is Process History page......</p>
+                            </div>
+                            
+                            <script>
+                            function openCity(evt, tabName) {
+                                var i, tabcontent, tablinks;
+                                tabcontent = document.getElementsByClassName("tabcontent");
+                                for (i = 0; i < tabcontent.length; i++) {
+                                tabcontent[i].style.display = "none";
+                                }
+                                tablinks = document.getElementsByClassName("tablinks");
+                                for (i = 0; i < tablinks.length; i++) {
+                                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                                }
+                                document.getElementById(tabName).style.display = "block";
+                                evt.currentTarget.className += " active";
+                            }
+                            </script>
+                        </div>
+
+                </div>
+                </div>
+            </div>
+      </div>
+
+</body>
 </html>
